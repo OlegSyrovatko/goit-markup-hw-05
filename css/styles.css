@@ -83,7 +83,7 @@ img{
   line-height: 1.55;
   letter-spacing: 0.03em;
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--timing-function);
 
   color: #fff;
@@ -793,23 +793,26 @@ letter-spacing: 0.03em;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: scale(0.1);
 }
+
 
 .modal{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition-property: scale;
-  transition-duration: 1000ms;
-  transition-timing-function: var(--timing-function);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function); 
 
   width: 528px;
   height: 581px;
-
   background-color: #FFF;
 }
+
+.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(0.1);
+}
+
 
 .close-layer{
   position: absolute;
